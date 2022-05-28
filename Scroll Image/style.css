@@ -1,0 +1,43 @@
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 1em;
+}
+
+.fa-arrow-down {
+  animation: scroll 0.3s infinite forwards;
+}
+@keyframes scroll {
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+.image {
+  background: url("pic.png");
+  background-size: cover;
+  display: flex;
+  margin: 1em;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  border-radius: 1em;
+  transform: translateX(400%);
+  transition: transform 0.5s;
+}
+
+.image:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.image.show {
+  transform: translateX(0);
+}
